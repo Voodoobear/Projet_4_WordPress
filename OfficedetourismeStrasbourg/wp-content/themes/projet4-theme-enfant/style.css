@@ -1,0 +1,138 @@
+/*
+Theme Name: projet4-theme-enfant
+Description: Theme enfant athena pour le Projet 4 OpenClassrooms
+Author: Sébastien Camberou
+Author URI: 
+Template: athena
+Version: 1.0.0
+*/
+
+
+/* règles pour le menu principale de la page d'accueil */
+
+#athena-header {
+    margin: 32px 0 0 0;
+}
+
+#primary-menu li a
+{
+	color: red;
+}
+
+.row
+{
+	max-width: 1600px !important;
+}
+
+.site-description {
+    font-size: 18px !important;
+}
+
+.site-infos a
+{
+	color: #E74C3C !important;
+}
+
+a.rel
+{
+	display: none !important;
+	font-size: 0;	
+}
+
+a.img
+{
+	height: 0 !important;
+	width: 0 !important;
+}
+
+.fa-facebook
+{
+	color: #0000FF;
+}
+
+.fa-google-plus
+{
+	color: #ff0000;
+}
+
+.fa-instagram
+{
+	color: #A5D5D5;
+}
+
+.fa-linkedin
+{
+	color: #AAAAff;
+}
+
+.fa-pinterest
+{
+	color: #D500D5;
+}
+
+.fa-twitter
+{
+	color: cyan;
+}
+
+.fa-facebook, .fa-google-plus, .fa-instagram, .fa-linkedin, .fa-pinterest, .fa-twitter
+{
+	font-size: 1.5em !important;
+	margin: 0 20px 0 0;
+}
+
+/* règles CSS pour la mise en forme du tableau des évènements de la partie activités du mois du site */
+
+#tablepress-1 > thead > tr
+{
+	background-color: #FF0000 !important;
+}
+
+#tablepress-1 {
+	border: 1px solid black !important;
+	border-radius: 4px !important;
+	box-shadow: 1px 1px black !important;
+	margin-bottom: 45px !important;
+}
+
+button {
+	border-radius: 4px !important;
+	box-shadow: 2px 2px grey !important;
+}
+
+td {
+	font-style: bold !important;
+	font-size: 1.2em !important;
+	color: #FF0000 !important;
+}
+
+.dataTables_length
+{
+	margin-bottom: 45px !important;
+}
+
+#tablepress-1_info
+{
+	margin: 45px 0 0 0 !important;
+}
+
+.dataTables_paginate.paging_simple
+{
+	margin: 40px 0 0 0 !important;
+}
+
+#tablepress-1_previous, #tablepress-1_next
+{
+    color: #000 !important;
+    font-size: 1.2em !important;
+}
+
+.paginate_button.disabled:after, .paginate_button.disabled:before {
+    color: #000 !important;
+}
+
+.tablepress tfoot th, .tablepress thead th {
+    background-color: #ff0000 !important;
+    font-weight: 700 !important;
+    vertical-align: middle !important;
+}
