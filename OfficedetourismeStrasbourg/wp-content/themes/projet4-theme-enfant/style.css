@@ -21,7 +21,7 @@ Version: 1.0.0
 
 .row
 {
-	max-width: 1600px !important;
+	max-width: 100% !important;
 }
 
 .site-description {
@@ -32,6 +32,46 @@ Version: 1.0.0
 {
 	color: #E74C3C !important;
 }
+
+/*.athena-blog-post {
+    width: 100% !important;
+    background-color: #fff5f5 !important;
+    border: 1px solid red !important;
+    opacity: 0.9;
+    margin-top: 25px;
+}
+
+.elementor-widget-text-editor
+{
+	background-color: #fff5f5!important;
+	opacity: 0.9;
+	border-radius: 5px;
+	border: 2px solid red;
+	padding: 5px;
+}
+
+.hentry
+{
+	background-color: rgba(255, 0, 0, 0.1)!important;
+	border: 1px solid lightgrey;
+	opacity: 0.9;
+	border-radius: 5px;
+	padding-left: 25px;
+	margin-top: 25px;
+	width: 100%;
+}
+
+.entry-content
+{
+	width: 95%;
+	padding-left: 25px;
+}
+
+.entry-content img
+{
+	border-radius: 5px;
+	border: 2px solid black;
+} */
 
 a.rel
 {
@@ -57,22 +97,22 @@ a.img
 
 .fa-instagram
 {
-	color: #A5D5D5;
+	color: #A9A9A9;
 }
 
 .fa-linkedin
 {
-	color: #AAAAff;
+	color: #C0C0FF;
 }
 
 .fa-pinterest
 {
-	color: #D500D5;
+	color: #FF0000;
 }
 
 .fa-twitter
 {
-	color: cyan;
+	color: lightblue;
 }
 
 .fa-facebook, .fa-google-plus, .fa-instagram, .fa-linkedin, .fa-pinterest, .fa-twitter
@@ -83,5 +123,64 @@ a.img
 
 /* règles CSS pour la mise en forme du tableau des évènements de la partie activités du mois du site */
 
+#tablepress-1 > thead > tr
+{
+	background-color: #FF0000 !important;
+}
 
+#tablepress-1 {
+	border: 1px solid black !important;
+	border-radius: 4px !important;
+	box-shadow: 1px 1px black !important;
+	margin-bottom: 45px !important;
+}
+
+button {
+	border-radius: 4px !important;
+	box-shadow: 2px 2px grey !important;
+}
+
+td {
+	font-style: bold !important;
+	font-size: 1.2em !important;
+	color: #FF0000 !important;
+}
+
+.dataTables_length
+{
+	margin-bottom: 45px !important;
+}
+
+#tablepress-1_info
+{
+	margin: 45px 0 0 0 !important;
+}
+
+.dataTables_paginate.paging_simple
+{
+	margin: 40px 0 0 0 !important;
+}
+
+#tablepress-1_previous, #tablepress-1_next
+{
+    color: #000 !important;
+    font-size: 1.2em !important;
+}
+
+.paginate_button.disabled:after, .paginate_button.disabled:before {
+    color: #000 !important;
+}
+
+.tablepress tfoot th, .tablepress thead th {
+    background-color: #ff0000 !important;
+    font-weight: 700 !important;
+    vertical-align: middle !important;
+}
+
+#tablepress-*
+{
+	width: 100% !important;
+}
+
+/* footer */
 

@@ -13,9 +13,11 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
     
         
-    <div class="athena-footer" data-parallax="scroll" data-image-src="http://localhost/wordpress/wp-content/uploads/2018/05/que-faire-a-strasbourg-bateau-canaux.jpg">
+    <div class="athena-footer" data-parallax="scroll" data-image-src="http://s730452794.onlinehome.fr/wp-content/uploads/2018/05/que-faire-a-strasbourg-bateau-canaux-1.jpg">
         <div>
             <div class="row">
                             </div>            
@@ -31,7 +33,7 @@
         <div class="row">
             
             <div class="athena-copyright">
-                Projet WordPress du parcours Développeur Web Junior © Sébastien Camberou - 2018            </div>
+                Projet WordPress OPCR © Réalisé par Sébastien Camberou - 2018 - <a href="http://s730452794.onlinehome.fr/mentions-legales/">Mentions légales</a>           </div>
             
             <div id="authica-social">
                 
@@ -62,6 +64,13 @@
                 </a>
                                 
             </div>
+
+            <br>
+
+            
+            
+        </div>
+        
         <div class="scroll-top alignright">
             <span class="fa fa-chevron-up"></span>
         </div>
@@ -70,6 +79,9 @@
         
     </div><!-- .site-info -->
     
+    
+    
+</footer>
     
     
 </footer><!-- #colophon -->
