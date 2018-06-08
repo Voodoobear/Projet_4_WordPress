@@ -29,11 +29,13 @@
 	
 	WPGMZA.MapsEngineDialog.prototype.onButtonClicked = function(event)
 	{
+		$(event.target).prop("disabled", true);
+		
 		$.ajax(WPGMZA.ajaxurl, {
 			method: "POST",
 			data: {
 				action: "wpgmza_maps_engine_dialog_set_engine",
-				engine: $("[name='wpgmza_maps_engine']").val()
+				engine: $("[name='wpgmza_maps_engine']:checked").val()
 			},
 			success: function(response, status, xhr) {
 				window.location.reload();

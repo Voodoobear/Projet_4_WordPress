@@ -34,15 +34,17 @@ class Plugin
 		// TODO: This should be in default settings, this code is duplicaetd
 		if(!empty($wpgmza_pro_version) && version_compare(trim($wpgmza_pro_version), '7.10.00', '<'))
 		{
+			$self = $this;
+			
 			$settings['wpgmza_maps_engine'] = $settings['engine'] = 'google-maps';
 			
-			add_filter('wpgooglemaps_filter_map_div_output', function($output) {
+			add_filter('wpgooglemaps_filter_map_div_output', function($output) use ($self) {
 				
 				$loader = new GoogleMapsAPILoader();
 				$loader->registerGoogleMaps();
 				$loader->enqueueGoogleMaps();
 				
-				$this->loadScripts();
+				$self->loadScripts();
 				
 				return $output;
 				
@@ -50,6 +52,8 @@ class Plugin
 		}
 		
 		$this->settings = (object)array_merge($this->legacySettings, $settings);
+		if(!empty($this->settings->wpgmza_maps_engine))
+			$this->settings->engine = $this->settings->wpgmza_maps_engine;
 		
 		add_action('wp_enqueue_scripts', function() {
 			Plugin::$enqueueScriptsFired = true;
@@ -92,7 +96,8 @@ class Plugin
 	
 	public function getDefaultSettings()
 	{
-		$defaultEngine = (empty($this->legacySettings['wpgmza_maps_engine']) || $this->legacySettings['wpgmza_maps_engine'] != 'google-maps' ? 'open-layers' : 'google-maps');
+		//$defaultEngine = (empty($this->legacySettings['wpgmza_maps_engine']) || $this->legacySettings['wpgmza_maps_engine'] != 'google-maps' ? 'open-layers' : 'google-maps');
+		$defaultEngine = 'google-maps';
 		
 		return apply_filters('wpgmza_plugin_get_default_settings', array(
 			'engine' 				=> $defaultEngine,
@@ -104,13 +109,16 @@ class Plugin
 	
 	public function getLocalizedData()
 	{
+		global $wpgmzaGDPRCompliance;
+		
 		$strings = new Strings();
 		
 		return apply_filters('wpgmza_plugin_get_localized_data', array(
-			'ajaxurl' 			=> admin_url('admin-ajax.php'),
-			'settings' 			=> $this->settings,
-			'localized_strings'	=> $strings->getLocalizedStrings(),
-			'_isProVersion'		=> $this->isProVersion()
+			'ajaxurl' 				=> admin_url('admin-ajax.php'),
+			'settings' 				=> $this->settings,
+			'localized_strings'		=> $strings->getLocalizedStrings(),
+			'api_consent_html'		=> $wpgmzaGDPRCompliance->getConsentPromptHTML(),
+			'_isProVersion'			=> $this->isProVersion()
 		));
 	}
 	

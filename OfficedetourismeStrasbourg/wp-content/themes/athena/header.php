@@ -55,7 +55,7 @@
                                     
                                     <div id="athena-logo" class="<?php echo get_theme_mod('logo_bool', 'on' ) == 'on' ? 'show' : 'hidden'; ?>">
                                         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                                            <img src="<?php echo get_theme_mod( 'logo', get_template_directory_uri() . '/inc/images/logo.png' ) ?>" title="<?php bloginfo('name'); ?>" />
+                                            
                                         </a>
                                     </div>
                                         <h1 class="site-title <?php echo get_theme_mod('logo_bool', 'on' ) == 'off' ? 'show' : 'hidden'; ?>">

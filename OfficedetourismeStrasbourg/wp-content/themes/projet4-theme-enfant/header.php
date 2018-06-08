@@ -15,20 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-        <!-- Twitter Card data -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="La Office de Tourisme - Ville de Strasbourg" />
-        <meta name="twitter:description" content="Préparez votre voyage dans nostre Ville de Strasbourg. Tout trouver pour se restaurer, l'hébergement, les endroits à voir, les activités intéressantes." />
-        <meta name="twitter:image" content="" />
-
-        <!-- Open Graph data -->
-        <meta property="og:title" content="Office de tourisme - Ville de Strasbourg" />
-        <meta property="og:type" content="Website" />
-        <meta property="og:url" content="http://s730452794.onlinehome.fr" />
-        <meta property="og:image" content="" />
-        <meta property="og:description" content="réparez votre voyage dans nostre Ville de Strasbourg. Tout trouver pour se restaurer, l'hébergement, les endroits à voir, les activités intéressantes." />
-        <meta property="fb:app_id" content="166523113967779"/>  
-
+    
         <?php wp_head(); ?>
     </head>
 
@@ -66,11 +53,6 @@
 
                                 <div class="site-branding">
                                     
-                                    <div id="athena-logo" class="<?php echo get_theme_mod('logo_bool', 'on' ) == 'on' ? 'show' : 'hidden'; ?>">
-                                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                                            <img src="<?php echo get_theme_mod( 'logo', get_template_directory_uri() . '/inc/images/logo.png' ) ?>" title="<?php bloginfo('name'); ?>" />
-                                        </a>
-                                    </div>
                                         <h1 class="site-title <?php echo get_theme_mod('logo_bool', 'on' ) == 'off' ? 'show' : 'hidden'; ?>">
                                             <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
                                         </h1>

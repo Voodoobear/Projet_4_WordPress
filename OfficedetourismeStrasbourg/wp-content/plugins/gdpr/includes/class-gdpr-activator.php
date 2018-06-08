@@ -32,6 +32,10 @@ class GDPR_Activator {
 	 * @author Fernando Claussen <fernandoclaussen@gmail.com>
 	 */
 	public static function activate() {
+		if( -1 === version_compare( phpversion(), GDPR_REQUIRED_PHP_VERSION ) ) {
+			die(sprintf( esc_html__( 'Your current PHP version (%1$s) is below the plugin required version of %2$s.', 'gdpr' ), phpversion(), GDPR_REQUIRED_PHP_VERSION ));
+		}
+
 		add_option( 'gdpr_disable_css', false );
 		add_option( 'gdpr_enable_telemetry_tracker', false );
 		add_option( 'gdpr_use_recaptcha', false );
@@ -70,6 +74,8 @@ class GDPR_Activator {
 		add_option( 'gdpr_refresh_after_preferences_update', true );
 		add_option( 'gdpr_enable_privacy_bar', true );
 		add_option( 'gdpr_display_cookie_categories_in_bar', false );
+		add_option( 'gdpr_hide_from_bots', true );
+		add_option( 'gdpr_reconsent_template', 'modal' );
 	}
 
 }
